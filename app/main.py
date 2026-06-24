@@ -13,9 +13,10 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://inventory-frontend-ir4voacon-heyoojatinheres-projects.vercel.app/",
-        "https://inventory-frontend-8klnnr9to-heyoojatinheres-projects.vercel.app/"
+        "https://inventory-frontend-ir4voacon-heyoojatinheres-projects.vercel.app",
+        "https://inventory-frontend-8klnnr9to-heyoojatinheres-projects.vercel.app"
     ],
+    allow_origin_regex=r"https://inventory-frontend-[a-z0-9-]+-heyoojatinheres-projects\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
